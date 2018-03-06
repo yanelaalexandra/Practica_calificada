@@ -9,16 +9,13 @@ import android.widget.Toast;
 import butterknife.BindString;
 import butterknife.ButterKnife;
 
+
+
 public class MainActivity extends AppCompatActivity {
 
+    @Bind(R.id.cuenta) EditText correo;
 
-
-    @Bind(R.id.cuenta)
-    EditText correo;
-
-    @Bind(R.id.contraseña)
-    EditText contraseña;
-
+    @Bind(R.id.contraseña) EditText contraseña;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
         }
     }
-                }
+   }
 
 
 
