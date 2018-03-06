@@ -6,15 +6,16 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import butterknife.BindString;
+
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 
 
 public class MainActivity extends AppCompatActivity {
 
-    @Bind(R.id.cuenta) EditText cuenta;
-    @Bind(R.id.contraseña) EditText contraseña;
+    @BindView(R.id.cuenta) EditText cuenta;
+    @BindView(R.id.contraseña) EditText contraseña;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
  String getcontraseña = contraseña.getText().toString();
 if(getcuenta.length() == 0 || getcontraseña.length() == 0)
          Toast.makeText(this,"Completar los campos requeridos", Toast.LENGTH_SHORT).show();
-  else if (getcuenta == "yanelaalexandra" || getcontraseña == "pachacama123"){
+  else if (getcuenta.equals("yanelaalexandra") || getcontraseña.equals("pachacama123")){
 
          Toast.makeText(this,"Bienvenida "+ getcuenta, Toast.LENGTH_SHORT).show();
 
